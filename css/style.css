@@ -1,0 +1,176 @@
+html{
+  box-sizing: border-box;
+  background-color: #ffffe5;
+  font-family: 'Raleway', sans-serif;
+  color: rgb(60, 60, 60);
+}
+body{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/*Task box styling*/
+.box{
+  min-width: 300px;
+  padding: 40px;
+  position: relative;
+  background-color: rgb(255, 255, 255);
+  margin: auto;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.date{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+}
+.left{
+  display: flex; 
+  align-items: center;
+}
+.day, .m-y, .weekday{
+  padding: 3px;
+}
+.day, .month, .weekday{
+  font-weight: 700;
+}
+.day{
+  font-size: 2.4rem;
+}
+.m-y{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.weekday, .month{
+  text-transform: uppercase;
+}
+
+.tasks {
+  margin: 20px 0 20px;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+}
+.tasks li{
+  margin: 5px;
+}
+.tasks input {
+  display: none;
+}
+.tasks input + label:before {
+  content: '⬜️';
+  margin-right: 10px;
+}
+.tasks input:checked + label:before {
+  content: '✅';
+}
+.tasks input:checked + label {
+  color: rgb(192, 192, 192);
+}
+
+.add-task{
+  position: absolute;
+  margin: auto;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+.add-task .add {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  background: 	#ffecb3;
+  border-radius: 50%;
+  transition: all 1s;
+  z-index: 4;
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.4);
+}
+.add-task .add:hover{
+  cursor: pointer;
+}
+.add-task .add::before{
+  content: " ";
+  position: absolute;
+  display: block;
+  background-color: rgb(60, 60, 60);
+  width: 2px;
+  left: 50%;
+  top: 10px;
+  bottom: 10px;
+  z-index: 9;
+  transition: all .5s;
+}
+.add-task .add::after{
+  content: " ";
+  position: absolute;
+  display: block;
+  background-color: rgb(60, 60, 60);
+  height: 2px;
+  top: 50%;
+  left: 10px;
+  right: 10px;
+  z-index: 9;
+  transition: all .5s;
+}
+.bar{
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 35px;
+  height: 35px;
+  outline: none;
+  border: none;
+  background: 	#ffecb3;
+  color: rgb(60, 60, 60);
+  text-shadow: 0 0 10px 	#ffecb3;
+  padding: 0 80px 0 20px;
+  border-radius: 30px;
+  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.2);
+  transition: all 1s;
+  opacity: 0;
+  z-index: 5;
+  font-weight: bolder;
+  letter-spacing: 0.1em;
+}
+.bar:hover{
+  cursor: pointer;
+}
+.bar:focus {
+  width: 200px;
+  opacity: 1;
+  cursor: text;
+}
+.bar:focus ~ .add{
+  right: -250px;
+  background: rgb(60, 60, 60);
+  z-index: 6;
+}
+.bar:focus ~ .add::before{
+  transform: rotate(45deg);
+  background-color: #ffecb3;
+  transition: all .5s;
+}
+.bar:focus ~ .add::after{
+  transform: rotate(45deg);
+  background-color: #ffecb3;
+  transition: all .5s;
+}
+.bar::placeholder{
+  color: rgb(60, 60, 60);
+  opacity: 0.5;
+  font-weight: bolder;
+}
