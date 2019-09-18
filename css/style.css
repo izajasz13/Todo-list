@@ -74,6 +74,21 @@ body{
   color: rgb(192, 192, 192);
 }
 
+.task{
+  display: flex;
+  justify-content: space-between;
+}
+.task i{
+  padding: 5px;
+  display: none;
+}
+.task:hover .info{
+  display: inline;
+}
+.task:hover .add{
+  display: inline;
+}
+
 .add-task{
   position: absolute;
   margin: auto;
@@ -173,4 +188,113 @@ body{
   color: rgb(60, 60, 60);
   opacity: 0.5;
   font-weight: bolder;
+}
+
+.popUpBox{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 500px;
+  height: 500px;
+  z-index: 15;
+}
+.popUpBox span, .popUpBox div{
+  padding: 20px;
+}
+.popUpBox .cross{
+  padding: 0;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+}
+.popUpBox .cross:before {
+  content: " ";
+  position: absolute;
+  display: block;
+  background-color: rgb(60, 60, 60);
+  width: 2px;
+  top: 2px;
+  bottom: 2px;
+  left: calc(50% - 1px);
+  transform: rotate(45deg);
+}
+.popUpBox .cross:after {
+  content: " ";
+  position: absolute;
+  display: block;
+  background-color: rgb(60, 60, 60);
+  height: 2px;
+  left: 2px;
+  right: 2px;
+  top: calc(50% - 1px);
+  transform: rotate(45deg);
+}
+.description{
+  height: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.date-info:before{
+  content: '📅\A';
+  white-space: pre;
+}
+.more-info:before{
+  content: '📝\A';
+  white-space: pre;
+}
+.add-info{
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.add-info input, .add-info textarea{
+  margin: 10px;
+}
+.add-date{
+  padding: 3px;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 700; 
+}
+.add-info .add-description-box{
+  padding: 0;
+  margin: 0;
+  width: 88%;
+  height: 55%;
+}
+.add-description{
+  padding: 10px;
+  resize: none;
+  font-family: 'Raleway', sans-serif;
+  height: 75%;
+  width: 90%;
+}
+.add-date-box:before{
+  content: '📅\A';
+  white-space: pre;
+}
+.add-description-box:before{
+  content: '📝\A';
+  white-space: pre;
+}
+.add-info .save-button{
+  cursor: pointer;
+  padding: 12px;
+  align-self: flex-end;
+  margin-top: 15px;
+  margin-right: 8%;
+  background: 	#ffecb3;
+  border-radius: 20px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+.add-info .save-button:hover{
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
