@@ -19,9 +19,10 @@ function addTask(e){
 function populateList(items = [], itemsList){
     itemsList.innerHTML = items.map((item, i) => {
         return `
-            <li>
+            <li class="task">
                 <input type="checkbox" data-index=${i} id="item${i}" ${item.done ? 'checked' : ''}/>
-                <label for="item${i}">${item.text}</label>
+                <label for="item${i}"><span class="name">${item.text}</span></label>
+                <span class="icons"><i class="fas fa-info info"></i><i class="fas fa-plus add"></i></span>
             </li>
         `;
     }).join('');
