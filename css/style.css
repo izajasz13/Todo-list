@@ -201,7 +201,7 @@ body{
   height: 500px;
   z-index: 15;
 }
-.popUpBox span, .popUpBox div{
+.popUpBox > span, .popUpBox > div{
   padding: 20px;
 }
 .popUpBox .cross{
@@ -238,7 +238,7 @@ body{
   height: 75%;
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: space-around;
 }
 .date-info:before{
   content: '📅\A';
