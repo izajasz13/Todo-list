@@ -11,9 +11,68 @@ body{
   align-items: center;
   text-align: center;
 }
+.hidden{
+  display: none;
+}
+/*Login box styling*/
+.login-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  height: 250px;
+  position: relative;
+  background-color: rgb(255, 255, 255);
+  margin: auto;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.login-box input, .register-box input{
+  font-size:18px;
+  margin: 10px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  border:none;
+  border-bottom:1px solid #757575;
+}
+.button-container{
+  display: flex;
+  align-self: center;
+}
+.login-button{
+  cursor: pointer;
+  margin: 10px;
+  padding: 12px;
+  background: 	#ffecb3;
+  border-radius: 20px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+.register-button{
+  font-size: 0.8rem;
+  cursor: pointer;
+  margin: 15px;
+  padding: 8px;
+  background: 	#ffecb3;
+  border-radius: 20px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+.register-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  height: 350px;
+  position: relative;
+  background-color: rgb(255, 255, 255);
+  margin: auto;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
 
 /*Task box styling*/
-.box{
+.task-box{
   min-width: 300px;
   padding: 40px;
   position: relative;

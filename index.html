@@ -7,7 +7,27 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway|Work+Sans:400,700&display=swap">
     </head>
     <body>
-        <div class="box">
+        <div class="login-box">
+            <form class="login-form">
+                <input id="email" class="email" type="email" placeholder="Email">
+                <input id="password" class="password" type="password" placeholder="Password">
+                <div class="button-container">
+                    <div class="register-button">Register</div>
+                    <div class="login-button">Login</div>
+                </div>
+            </form>
+        </div>
+        <div class="register-box hidden">
+                <form class="register-form">
+                    <input id="name" class="name" type="text" placeholder="Name">
+                    <input id="email" class="email" type="email" placeholder="Email">
+                    <input id="password" class="password" type="password" placeholder="Password">
+                    <div class="button-container">
+                        <div class="login-button register">Register</div>
+                    </div>
+                </form>
+            </div>
+        <div class="task-box hidden">
             <div class="date">
                 <div class="left">
                     <div class="day"></div>
@@ -26,6 +46,7 @@
             </form>
         </div>
         <script src="https://kit.fontawesome.com/c190bf0a9f.js"></script>
+        <script src="js/contentHandler.js"></script>
         <script src="js/getDate.js"></script>
         <script src="js/taskHandler.js"></script>
         <script src="js/moreInfo.js"></script>
