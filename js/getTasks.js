@@ -7,7 +7,7 @@ async function getTasks(){
         }
     };
 
-    fetch('http://localhost:3000/api/tasks/get', options)
+    fetch('https://salty-meadow-29857.herokuapp.com/api/tasks/get', options)
         .then(handleErrors)
         .then(async (response) => {
             const res = await response.json();

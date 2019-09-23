@@ -10,7 +10,7 @@ const options = {
     },
     body: JSON.stringify(data)
 };
-fetch('http://localhost:3000/api/tasks/post', options)
+fetch('https://salty-meadow-29857.herokuapp.com/api/tasks/post', options)
     .then(handleErrors)
     .then(async (response) => {
         //const res = await response.json();

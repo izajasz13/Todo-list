@@ -23,7 +23,7 @@ registerButton.addEventListener('click', async () => {
         body: JSON.stringify(data)
     };
 
-    fetch('http://localhost:3000/api/user/register', options)
+    fetch('https://salty-meadow-29857.herokuapp.com/api/user/register', options)
         .then(handleErrors)
         .then(async (response) => {
             const res = await response.json();
