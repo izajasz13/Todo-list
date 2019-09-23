@@ -156,6 +156,9 @@ body .hidden{
 .task:hover .add{
   display: inline;
 }
+.task:hover .close{
+  display: inline;
+}
 
 .add-task{
   position: absolute;

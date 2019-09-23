@@ -15,6 +15,6 @@ async function getTasks(){
             populateList(tasks, list);
         })
         .catch(async (error) => {
-            console.log(error);
+            console.log(err);
         });
 }
